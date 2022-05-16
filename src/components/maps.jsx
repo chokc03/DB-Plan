@@ -1,9 +1,9 @@
 import React from 'react'
 
-function maps() {
+function Maps() {
   return (
     <div>maps</div>
   )
 }
 
-export default maps
+export default Maps
