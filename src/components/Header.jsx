@@ -1,5 +1,6 @@
 import React from 'react';
-import {GrLanguage} from 'react-icons/gr';
+import {MdLanguage} from 'react-icons/md';
+import '../styles/header.scss';
 
 //Home Button(Logo) and Language change button included
 function Header() {
@@ -11,7 +12,7 @@ function Header() {
         </div>
         <div className="Language">
           <button select-lang="EN" className="LanguageBtn">
-            <GrLanguage/>
+            <MdLanguage className="LanguageIcon"/>
           </button>
         </div>
     </div>

@@ -1,0 +1,91 @@
+@import 'variables';
+
+.HeaderContainer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin:0 auto;
+    padding:10px 0;
+}
+.Logo{
+    display: flex;
+    align-items: center;
+    .LogoImg{
+        max-width:100px;
+    }
+    .LogoName{
+        color:$main_color;
+        width: 300px;
+        font-weight: bold;
+        font-size: 1.2rem;
+    }
+}
+.Language{
+    padding-right: 10px;
+    .LanguageBtn{
+        position: relative;
+        border: none;
+        outline: none;
+        background: transparent;
+        cursor: pointer;
+        @include flexCenter;
+        &:before{
+            content: attr(select-lang);
+            position: absolute;
+            font-weight: bold;
+            z-index:1;
+            transition: all 0.2s ease-in;
+        }
+        &:hover{
+            &:before{
+                content: '';
+            }
+            .LanguageIcon{
+                color:$main_color;
+                opacity: 0.8;
+            }
+        }
+        .LanguageIcon{
+            font-size: 2.1rem;
+            color:$grey;
+            opacity: 0.35;
+            transition: all 0.2s ease-in;
+            transform: rotate(-30deg);
+        }
+    }
+}
+
+@media screen and (max-width:700px) {
+    .HeaderContainer{
+        @include flexCenter;
+        position: relative;
+    }
+    .Logo{
+        flex-direction: column;
+        .LogoName{
+            @include flexCenter;
+            font-size: 0.8rem;
+        }
+    }
+    .Language{
+        position: absolute;
+        top:20px;
+        right:0px;
+        .LanguageBtn{
+            &:before{
+                position: relative;
+                margin-right: 5px;
+                font-size: 0.1rem;
+            }
+            &:hover{
+                &::before{
+                    content: attr(select-lang);
+                }
+            }
+            .LanguageIcon{
+                font-size: 1rem;
+            }
+        }
+    }
+}

@@ -6,9 +6,11 @@ function Results() {
   const [loading, setLoading] = useState(false);
   return (
     <div className="ResultsContainer">
+      {/* show the loadingBar until API fetching is complete */}
       <div className="loadingBar">
         <img src="/img/Tram.svg" alt="loading..." />
       </div>
+      {/* Show the results for the train plan and maps(using with google map) */}
       <div className="ResultsForMapAndPlan">
         <div className="PlanREsults">
           <div className="PlansWrapper">

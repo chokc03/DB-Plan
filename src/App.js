@@ -1,4 +1,4 @@
-import './App.scss';
+import './styles/global.scss';
 import Header from './components/Header';
 import Results from './components/Results';
 import Search from './components/Search';
