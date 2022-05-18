@@ -3,8 +3,13 @@
 $white:#fff;
 $black:#000;
 $main_color:#F01414;
+$light_red:#ffcccb;
 $grey:#5c5c5c;
 
+//max-width
+@mixin maxWidth{
+    max-width: 1200px;
+}
 
 //div center
 @mixin flexCenter{

@@ -1,0 +1,57 @@
+@import 'variables';
+
+.ResultsContainer{
+    @include maxWidth;
+    margin: 0 auto;
+    .ResultsForMapAndPlan{
+        display: flex;
+        margin:0 20px 0 20px;
+        height:450px;
+    }
+}
+.PlanResults{
+    width:40%;
+    flex-direction: column;
+    overflow-y: scroll;
+    &::-webkit-scrollbar{
+        display: none;
+    }
+    .PlansWrapper{
+        margin-bottom: 10px;
+        border: $light_red solid 2px;
+        background-color: #fff4f5;
+        width:100%;
+        border-radius: 10px;
+        padding:10px 20px;
+        height:auto;
+        @include flexCenter;
+        flex-direction: column;
+        cursor: pointer;
+        &:hover{
+            border-color: $main_color;
+        }
+    }
+}
+.MapResults{
+    width:60%;
+    .MapContainer{
+        margin-left: 10px;
+    }
+}
+
+@media screen and (max-width:750px) {
+    .ResultsForMapAndPlan{
+        flex-direction: column;
+        @include flexCenter;
+    }
+    .PlanResults{
+        height:60%;
+        width:70%;
+        margin-bottom: 20px;
+    }
+    .MapResults{
+        height:40%;
+        width:100%;
+    }
+}
+
