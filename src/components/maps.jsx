@@ -13,13 +13,16 @@ function Maps() {
     lng:8.682127
   }
   const {isLoaded,loadError}=useLoadScript({
-    googleMapsApiKey:process.env.REACT_APP_GOOGLE_MAPS_API_KEY,
+    googleMapsApiKey:process.env.REACT_APP_GOOGLE_MAP_KEY,
     libraries,
   })
+  const test=()=>{
+    console.log(process.env);
+  }
   if(loadError) return "Error loading";
   if(!isLoaded) return "Loading";
   return (
-    <div>
+    <div onClick={test}>
       <GoogleMap mapContainerStyle={mapContainerStyle} zoom={8} center={mapCenter}>
         
       </GoogleMap>
