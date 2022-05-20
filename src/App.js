@@ -1,14 +1,15 @@
 import './styles/global.scss';
-import Header from './components/Header';
-import Results from './components/Results';
-import Search from './components/Search';
+import Home from './components/Home';
+import {Routes,Route} from 'react-router-dom';
+import Maps from './components/Maps';
 
 function App() {
   return (
     <div className="App">
-      <Header/>
-      <Search/>
-      <Results/>
+      <Routes>
+          <Route exact path="/" element={<Home/>} />
+          <Route path="/Map" element={<Maps/>}/>
+      </Routes>
     </div>
   );
 }

@@ -4,8 +4,8 @@
     border:solid 5px $main_color;
     border-left: none;
     border-right: none;
+    background-color: $backgroung_grey_color;
     padding: 20px 0;
-    margin:20px 0;
     width:100%;
     @include flexCenter;
     form{
@@ -34,8 +34,7 @@
             border-radius: 20px;
             padding:10px;
             font-size: 1rem;
-            border: $light_red 2.5px solid;
-            outline:none;
+            border: $input_border_color 2.5px solid;
             &:focus{
                 border-color: $main_color;
             }
@@ -57,12 +56,11 @@
         @include flexCenter;
         width:50%;
         height:35px;
-        outline: none;
-        background-color: transparent;
+        background-color: $white;
         border-radius: 20px;
         font-size: 1.2rem;
         cursor: pointer;
-        border: $light_red 2px solid ;
+        border: $input_border_color 2px solid ;
         color:$main_color;
         transition: all ease-in-out 0.2s;
         z-index:1;

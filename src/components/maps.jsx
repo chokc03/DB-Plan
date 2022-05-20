@@ -1,12 +1,13 @@
 import React from 'react'
 import {GoogleMap, useLoadScript} from '@react-google-maps/api';
+import '../styles/maps.scss';
+import Header from './Header';
 
 function Maps() { 
   const libraries = ["places"];
   const mapContainerStyle={
     width:'100%',
-    height:'400px',
-    borderRadius:'20px',
+    height:'100%',
   };
   const mapCenter={
     lat:50.110924,
@@ -16,16 +17,15 @@ function Maps() {
     googleMapsApiKey:process.env.REACT_APP_GOOGLE_MAP_KEY,
     libraries,
   })
-  const test=()=>{
-    console.log(process.env);
-  }
   if(loadError) return "Error loading";
   if(!isLoaded) return "Loading";
   return (
-    <div onClick={test}>
-      <GoogleMap mapContainerStyle={mapContainerStyle} zoom={8} center={mapCenter}>
-        
-      </GoogleMap>
+    <div className="Maps">
+      <Header/>
+        <div className="GoogleMapContainer">
+          <GoogleMap mapContainerStyle={mapContainerStyle} zoom={8} center={mapCenter}>
+          </GoogleMap>
+        </div>
     </div>
   )
 }

@@ -1,16 +1,21 @@
 @import 'variables';
 
+.Results{
+    background-color: $backgroung_grey_color;
+    height: 100vh;
+}
+
 .ResultsContainer{
     @include maxWidth;
+    padding-top:20px;
     margin: 0 auto;
     .ResultsForMapAndPlan{
-        display: flex;
+        @include flexCenter;
         margin:0 20px 0 20px;
-        height:420px;
     }
 }
 .PlanResults{
-    width:40%;
+    width:80%;
     flex-direction: column;
     overflow-y: scroll;
     &::-webkit-scrollbar{
@@ -18,27 +23,22 @@
     }
     .PlansWrapper{
         margin-bottom: 10px;
-        border: $light_red solid 2px;
-        background-color: #fff4f5;
+        border: $input_border_color solid 2px;
+        background-color: $white;
         width:100%;
         border-radius: 10px;
         padding:10px 20px;
-        height:auto;
         @include flexCenter;
         flex-direction: column;
         cursor: pointer;
         &:hover{
             border-color: $main_color;
         }
+        .LinkBtnForMap{
+            color:$black;
+        }
     }
 }
-.MapResults{
-    width:60%;
-    .MapContainer{
-        margin-left: 10px;
-    }
-}
-
 @media screen and (max-width:750px) {
     .ResultsForMapAndPlan{
         flex-direction: column;
@@ -48,10 +48,6 @@
         height:60%;
         width:70%;
         margin-bottom: 20px;
-    }
-    .MapResults{
-        height:40%;
-        width:100%;
     }
 }
 

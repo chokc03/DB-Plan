@@ -11,31 +11,33 @@ function Search() {
     setLoading(value=>!value);
   }
   return (
-    <div className="SearchContainer">
-      <form>
-        <div className="SearchBarContainer">
-          <div className="SearchInput From">
-            <p>From</p>
-            <input type="text" placeholder='starting point'/>
-            <MdMyLocation className="CurrentLocationIcon"/>
+    <div className="Search">
+      <div className="SearchContainer">
+        <form>
+          <div className="SearchBarContainer">
+            <div className="SearchInput From">
+              <p>From</p>
+              <input type="text" placeholder='starting point'/>
+              <MdMyLocation className="CurrentLocationIcon"/>
+            </div>
+            <div className="SearchInput To">
+              <p>To</p>
+              <input type="text" placeholder='destination point'/>
+              <MdMyLocation className="CurrentLocationIcon"/>
+            </div>
+            <div className="SearchInput Time">
+              <input type="time" placeholder='location'/>
+            </div>
           </div>
-          <div className="SearchInput To">
-            <p>To</p>
-            <input type="text" placeholder='destination point'/>
-            <MdMyLocation className="CurrentLocationIcon"/>
-          </div>
-          <div className="SearchInput Time">
-            <input type="time" placeholder='location'/>
-          </div>
-        </div>
-        <div className="SearchBtnContainer">
-          <button onClick={handleLoading} className={loading?"SearchBtn Loading":"SearchBtn"}>
-            Search
-            <img className={loading?"LoadingBar":"LoadingComplete"} src="/img/Tram.svg" alt="loading..." />
-          </button>
+          <div className="SearchBtnContainer">
+            <button onClick={handleLoading} className={loading?"SearchBtn Loading":"SearchBtn"}>
+              Search
+              <img className={loading?"LoadingBar":"LoadingComplete"} src="/img/Tram.svg" alt="loading..." />
+            </button>
 
-        </div>
-      </form>
+          </div>
+        </form>
+      </div>
     </div>
   )
 }
