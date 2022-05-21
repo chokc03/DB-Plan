@@ -10,6 +10,7 @@ function Search() {
     e.preventDefault();
     setLoading(value=>!value);
   }
+
   return (
     <div className="Search">
       <div className="SearchContainer">
