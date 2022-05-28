@@ -19,7 +19,7 @@ function Results() {
               <p className='Duration'>Duration</p>
               <p className='Delay'>Delay</p>
               <p className='Km'>km</p>
-              <Link to='/Map' className="LinkBtnForMap">
+              <Link to='/Maps' className="LinkBtnForMap">
                 <FaMapMarkedAlt/>
               </Link>
             </div>
